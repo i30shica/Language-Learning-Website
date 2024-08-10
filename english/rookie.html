@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Alphabets and Pronunciation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+            background-color: #b30086; /* Background color set to #b30086 */
+        }
+
+        .alphabet-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .alphabet-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .alphabet-item {
+            margin: 10px;
+            background-color: #8B008B; /* Alphabets block color set to #8B008B */
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .alphabet {
+            font-size: 36px;
+            color: white; /* Set alphabet text color to white */
+        }
+
+        .volume-icon {
+            font-size: 24px;
+            cursor: pointer;
+            color: white; /* Set volume icon color to white */
+            background: none;
+            border: none;
+            margin-top: 10px; /* Added margin to separate alphabet and volume button */
+        }
+
+        .pronunciation {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alphabet-container">
+        <h1>English Alphabets and Pronunciation</h1>
+        <div class="alphabet-list">
+            <div class="alphabet-item">
+                <div class="alphabet">A</div>
+                <button class="volume-icon" onclick="pronounce('A')">🔊</button>
+            </div>
+            <!-- Add more alphabet items here -->
+            <!-- Example for B -->
+            <div class="alphabet-item">
+                <div class="alphabet">B</div>
+                <button class="volume-icon" onclick="pronounce('B')">🔊</button>
+            </div>
+            <!-- Continue with other alphabets -->
+            <!-- Example for C -->
+            <div class="alphabet-item">
+                <div class="alphabet">C</div>
+                <button class="volume-icon" onclick="pronounce('C')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">D</div>
+                <button class="volume-icon" onclick="pronounce('D')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">E</div>
+                <button class="volume-icon" onclick="pronounce('E')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">F</div>
+                <button class="volume-icon" onclick="pronounce('F')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">G</div>
+                <button class="volume-icon" onclick="pronounce('G')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">H</div>
+                <button class="volume-icon" onclick="pronounce('H')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">I</div>
+                <button class="volume-icon" onclick="pronounce('I')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">J</div>
+                <button class="volume-icon" onclick="pronounce('J')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">K</div>
+                <button class="volume-icon" onclick="pronounce('K')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">L</div>
+                <button class="volume-icon" onclick="pronounce('L')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">M</div>
+                <button class="volume-icon" onclick="pronounce('M')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">N</div>
+                <button class="volume-icon" onclick="pronounce('N')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">O</div>
+                <button class="volume-icon" onclick="pronounce('O')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">P</div>
+                <button class="volume-icon" onclick="pronounce('P')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">Q</div>
+                <button class="volume-icon" onclick="pronounce('Q')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">R</div>
+                <button class="volume-icon" onclick="pronounce('R')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">S</div>
+                <button class="volume-icon" onclick="pronounce('S')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">T</div>
+                <button class="volume-icon" onclick="pronounce('T')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">U</div>
+                <button class="volume-icon" onclick="pronounce('U')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">V</div>
+                <button class="volume-icon" onclick="pronounce('V')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">W</div>
+                <button class="volume-icon" onclick="pronounce('W')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">X</div>
+                <button class="volume-icon" onclick="pronounce('X')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">Y</div>
+                <button class="volume-icon" onclick="pronounce('Y')">🔊</button>
+            </div>
+            <div class="alphabet-item">
+                <div class="alphabet">Z</div>
+                <button class="volume-icon" onclick="pronounce('Z')">🔊</button>
+            </div>
+            <!-- Continue with other alphabets -->
+            <!-- ... Repeat for all 26 alphabets ... -->
+        </div>
+    </div>
+
+    <script>
+        function pronounce(letter) {
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = letter;
+            speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+
+</html>

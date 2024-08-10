@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #b30086;
+        }
+
+        .chatbot-container {
+            background-color: #4c1b42;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chatbox {
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            overflow-y: scroll;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 80px);
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8a2be2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <h2>YOUR ASSISTANT</h2>
+        <div class="chatbox" id="chatbox"></div>
+        <div style="display: flex;">
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("userInput").value;
+            var chatbox = document.getElementById("chatbox");
+            
+            // Display user message
+            chatbox.innerHTML += '<div class="message"><strong>You:</strong> ' + userInput + '</div>';
+            document.getElementById("userInput").value = "";
+
+            // Bot responds
+            var botResponse = getBotResponse(userInput);
+            chatbox.innerHTML += '<div class="message"><strong>Bot:</strong> ' + botResponse + '</div>';
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function getBotResponse(userInput) {
+            // Define bot responses based on user input
+            if (userInput.toLowerCase().includes("time to learn english")) {
+                return "The time it takes to learn English depends on various factors, including your current proficiency, the intensity of your study, and how much time you dedicate each day. On average, it can take several months to a few years to become proficient.";
+            } else if (userInput.toLowerCase().includes("time to learn spanish")) {
+                return "Learning Spanish can take a similar amount of time as learning English. It depends on your dedication and practice.";
+            } else if (userInput.toLowerCase().includes("hii")) {
+                return "Hello! How can I assist you today?";
+            } else if (userInput.toLowerCase().includes("how is your experience")) {
+                return "I'm just a computer program, so I don't have experiences like humans do. But I'm here to help you!";
+            } else if (userInput.toLowerCase().includes("what languages do you know")) {
+                return "I'm designed to assist with various languages, including English, Spanish, Korean, and French!";
+            } else {
+                return "I'm not sure how to respond to that. Feel free to ask another question!";
+            }
+        }
+    </script>
+</body>
+</html>
